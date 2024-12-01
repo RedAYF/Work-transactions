@@ -35,15 +35,15 @@ class TransactionApp(ft.UserControl):
             focused_color=ft.colors.BLACK,
             bgcolor="white"
         )
-        self.amount = ft.TextField(label="Сумма пополнения", width=400, label_style=ft.TextStyle(color=ft.colors.BLACK),
+        self.amount = ft.TextField(label="Сумма пополнения на пиво", width=750, label_style=ft.TextStyle(color=ft.colors.BLACK),
                                    focused_border_color=ft.colors.BLACK, cursor_color=ft.colors.BLACK,
                                    color=ft.colors.BLACK)
-        self.pay_button = ft.ElevatedButton("Оплатить", bgcolor=ft.colors.WHITE, color=ft.colors.BLACK,
-                                            on_click=self.send_transaction, width=400, height=50,
+        self.pay_button = ft.ElevatedButton("Оплатить", bgcolor=ft.colors.WHITE, color=ft.colors.RED,
+                                            on_click=self.send_transaction, width=750, height=80,
                                             style=ft.ButtonStyle(overlay_color=ft.colors.WHITE, shape=ft.RoundedRectangleBorder(radius=10),
                                                                  color={ft.ControlState.FOCUSED: ft.colors.WHITE,
-                                                                        ft.ControlState.HOVERED: ft.colors.BLACK,
-                                                                        ft.ControlState.DEFAULT: ft.colors.BLACK}))
+                                                                        ft.ControlState.HOVERED: ft.colors.RED,
+                                                                        ft.ControlState.DEFAULT: ft.colors.RED}))
 
         self.container = ft.Column(
             alignment=ft.MainAxisAlignment.CENTER,
@@ -112,7 +112,7 @@ class TransactionApp(ft.UserControl):
 
 
 def main(page):
-    page.title = "Сервис Транзакций - PayEasy"
+    page.title = "Сервис Транзакций - BudPay"
     page.horizontal_alignment = "center"
     page.vertical_alignment = "center"
     page.bgcolor = "#A5A5A5"
