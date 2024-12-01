@@ -1,7 +1,7 @@
 import sqlite3
 
 def initialize_db():
-    conn = sqlite3.connect('transactions.db')
+    conn = sqlite3.connect('Bud_transactions.db')
     cursor = conn.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS transactions (
                         id INTEGER PRIMARY KEY,
